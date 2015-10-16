@@ -1,0 +1,23 @@
+{
+  "name": "score11/score11",
+  "description": "Backend of Score11",
+  "minimum-stability": "dev",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dominik Jungowski",
+      "email": "dominik@jungowski.de"
+    },
+    {
+      "name": "Alexander Ermer",
+      "email": "alexander.ermer@allanon-coding.de"
+    },
+    {
+      "name": "Christopher Schreiner",
+      "email": "christopher@infanf.de"
+    }
+  ],
+  "require": {
+    "laravel/installer": "v1.1.0"
+  }
+}
