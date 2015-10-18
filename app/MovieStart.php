@@ -5,19 +5,15 @@ namespace App;
 use DateTime;
 use Illuminate\Database\Eloquent\Model;
 
-class DVDStart extends Model
+class MovieStart extends Model
 {
     protected $primaryKey = 'movieID';
-    protected $table = 'dvdstart';
+    protected $table = 'moviestart';
     public $timestamps = false;
 
-    public function movie() {
-        return $this->belongsTo('App\Movie');
-    }
-
-    public function titles()
+    public function movie()
     {
-        return $this->hasMany('App\Title', 'movieID');
+        return $this->belongsTo('App\Movie');
     }
 
     public function scopeFutureOnly($query)

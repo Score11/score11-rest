@@ -9,6 +9,10 @@ class Title extends Model
     protected $table = 'title_m';
     public $timestamps = false;
 
+    public function movie() {
+        return $this->belongsTo('App\Movie');
+    }
+
     public function dvdstart()
     {
         return $this->belongsTo('App\DVDStart');
