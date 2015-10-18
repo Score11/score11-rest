@@ -1,3 +1,9 @@
+<?php
+use DebugBar\StandardDebugBar;
+
+$debugbar = new StandardDebugBar();
+$debugbarRenderer = $debugbar->getJavascriptRenderer();
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -34,12 +40,14 @@
                 font-size: 96px;
             }
         </style>
+        <?php echo $debugbarRenderer->renderHead() ?>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">Score11</div>
             </div>
         </div>
+        <?php echo $debugbarRenderer->render() ?>
     </body>
 </html>
