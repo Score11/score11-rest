@@ -18,6 +18,7 @@ class MovieStartController extends Controller
             ->whereHas('moviestart', function ($query) {
                 $query->futureOnly();
             })
+            ->take(10)
             ->get();
 
         $movies = $movies->sortBy('moviestart.date');

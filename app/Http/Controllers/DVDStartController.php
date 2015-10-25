@@ -16,6 +16,7 @@ class DVDStartController extends Controller
                 $query->select('movieID', 'title', 'version', 'year');
             }))
             ->orderBy('releaseDate')
+            ->take(10)
             ->get(array('movieID', 'date as releaseDate'));
 
         $fractal = new Manager();

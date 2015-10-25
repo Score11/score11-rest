@@ -14,7 +14,7 @@ class DVDStartTransformer extends TransformerAbstract
     public function transform(DVDStart $dvdstart)
     {
         return [
-            'movieID' => $dvdstart->movieID,
+            'id' => $dvdstart->movieID,
             'releaseDate' => $dvdstart->releaseDate,
         ];
     }
