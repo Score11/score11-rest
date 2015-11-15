@@ -1,0 +1,10 @@
+# Intellij
+.idea/
+*.iml
+*.iws
+
+#composer
+vendor/
+
+# laravel local config
+.env

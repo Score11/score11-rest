@@ -1,0 +1,1 @@
+var score11App = angular.module('score11App', ['mainCtrl', 'movieStartService', 'dvdStartService']);
