@@ -6,6 +6,7 @@ use App\DVDStart;
 use App\Http\Requests;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Collection;
+use Illuminate\Http\Response;
 
 class DVDStartController extends Controller
 {
@@ -22,7 +23,7 @@ class DVDStartController extends Controller
         $fractal = new Manager();
         $resource = new Collection( $dvdstarts, new \App\Transformers\DVDStartTransformer );
         $resource->setMetaValue('total', count($dvdstarts));
-        return $fractal->createData( $resource )->toJson();
+		return response()->json($fractal->createData($resource)->toArray());
     }
 }
 
