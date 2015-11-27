@@ -7,6 +7,7 @@ use App\Movie;
 use App\Transformers\MovieTransformer;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Item;
+use Illuminate\Http\Response;
 
 class MovieController extends Controller
 {
@@ -16,6 +17,6 @@ class MovieController extends Controller
 
         $fractal = new Manager();
         $resource = new Item($movie, new MovieTransformer);
-        return $fractal->createData($resource)->toJson();
+		return response()->json($fractal->createData($resource)->toArray());
     }
 }
