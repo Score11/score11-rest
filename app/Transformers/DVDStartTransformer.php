@@ -3,6 +3,8 @@
 namespace App\Transformers;
 
 use App\DVDStart;
+use App\Models\MovieImage;
+use App\Movie;
 use League\Fractal\TransformerAbstract;
 
 class DVDStartTransformer extends TransformerAbstract
@@ -13,9 +15,12 @@ class DVDStartTransformer extends TransformerAbstract
 
     public function transform(DVDStart $dvdstart)
     {
+		$movie = $dvdstart->movie;
+		$movieImage = new MovieImage($movie->ID, $movie->image);
         return [
             'id' => $dvdstart->movieID,
             'releaseDate' => $dvdstart->releaseDate,
+			'image' => $movieImage->getLink()
         ];
     }
 

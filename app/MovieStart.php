@@ -13,7 +13,7 @@ class MovieStart extends Model
 
     public function movie()
     {
-        return $this->belongsTo('App\Movie');
+		return $this->belongsTo('App\Movie', 'movieID');
     }
 
     public function scopeFutureOnly($query)
