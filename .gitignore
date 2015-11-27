@@ -8,3 +8,6 @@ vendor/
 
 # laravel local config
 .env
+
+# Caches
+bootstrap/cache/**
