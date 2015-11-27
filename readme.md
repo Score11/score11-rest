@@ -11,6 +11,7 @@
 2. Run `composer install`
 3. Copy environment-configuration `copy .env.example .env`
 4. Optional: customize your local config
+5. Run `./setup.sh`
 
 ## Running
 ### Start server

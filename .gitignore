@@ -21,6 +21,7 @@ storage/framework/services.json
 storage/framework/events.scanned.php
 storage/framework/routes.scanned.php
 storage/framework/down
+storage/framework/sessions
 
 # Caches
 bootstrap/cache/**
