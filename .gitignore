@@ -6,6 +6,9 @@
 #composer
 vendor/
 
+# Sqlite
+*.sqlite
+
 # laravel local config
 .env
 
