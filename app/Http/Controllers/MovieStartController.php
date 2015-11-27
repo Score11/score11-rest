@@ -7,6 +7,7 @@ use App\Movie;
 use App\Transformers\MovieStartTransformer;
 use League\Fractal\Manager;
 use League\Fractal\Resource\Collection;
+use Illuminate\Http\Response;
 
 class MovieStartController extends Controller
 {
@@ -26,6 +27,6 @@ class MovieStartController extends Controller
         $fractal = new Manager();
         $resource = new Collection($movies, new MovieStartTransformer);
         $resource->setMetaValue('total', count($movies));
-        return $fractal->createData($resource)->toJson();
+		return response()->json($fractal->createData($resource)->toArray());
     }
 }
