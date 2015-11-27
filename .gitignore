@@ -12,5 +12,18 @@ vendor/
 # laravel local config
 .env
 
+# Storages
+storage/debugbar/**
+storage/framework/config.php
+storage/framework/routes.php
+storage/framework/compiled.php
+storage/framework/services.json
+storage/framework/events.scanned.php
+storage/framework/routes.scanned.php
+storage/framework/down
+
 # Caches
 bootstrap/cache/**
+
+# Logs
+storage/logs/**
