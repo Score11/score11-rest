@@ -6,7 +6,7 @@ return [
 	 */
 	'host' => 'http://www.score11.de',
 	'movieimgpath' => 'p',
-	'movie-logo' => 'img/logo-movie.png',
+	'movie-logo' => '2012/img/logo-movie.png',
 
 
 	/*

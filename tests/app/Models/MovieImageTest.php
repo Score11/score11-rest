@@ -7,7 +7,7 @@ class MovieImageTest extends TestCase
 	public function testGetLinkWithoutImage()
 	{
 		$image = new MovieImage(28786, 'n');
-		$expected = "img/logo-movie.png";
+		$expected = "http://www.score11.de/2012/img/logo-movie.png";
 		$actual = $image->getLink();
 		self::assertSame($expected, $actual);
 	}

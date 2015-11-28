@@ -21,7 +21,7 @@ class MovieImage
 	public function getLink()
 	{
 		if ($this->_hasImage == 'n') {
-			$link = config('app.movie-logo');
+			$link = sprintf('%s/%s', config('app.host'), config('app.movie-logo'));
 		} else {
 			$lastTwo = substr($this->_movieId, -2, 2);
 			if (strlen($lastTwo) == 1) {
