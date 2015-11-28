@@ -57,6 +57,7 @@
                 <div class="col-xs-6">
                     <h3>MovieStarts</h3>
                     <div ng-hide="loading" ng-repeat="movie in moviestarts.data">
+						<img src="{{ movie.image }}" alt="" /><br>
                         {{ movie.id }} - {{ movie.startdate }}
                         <div ng-repeat="title in movie.titles.data">
                             {{ title.version }} - {{ title.title }} - {{ title.year }}
@@ -68,6 +69,7 @@
                 <div class="col-xs-6">
                     <h3>DVDStarts</h3>
                     <div ng-hide="loading" ng-repeat="movie in dvdstarts.data">
+						<img src="{{ movie.image }}" alt="" /><br>
                         {{ movie.id }} - {{ movie.releaseDate }}
                         <div ng-repeat="title in movie.titles.data">
                             {{ title.version }} - {{ title.title }} - {{ title.year }}
