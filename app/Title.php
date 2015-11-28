@@ -10,7 +10,7 @@ class Title extends Model
     public $timestamps = false;
 
     public function movie() {
-        return $this->belongsTo('App\Movie');
+		return $this->belongsTo('App\Movie', 'movieID');
     }
 
     public function dvdstart()

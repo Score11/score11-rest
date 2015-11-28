@@ -1,19 +1,26 @@
 <?php
 
 return [
+	/**
+	 * Score11 specific
+	 */
+	'host' => 'http://www.score11.de',
+	'movieimgpath' => 'p',
+	'movie-logo' => '2012/img/logo-movie.png',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Application Debug Mode
-    |--------------------------------------------------------------------------
-    |
-    | When your application is in debug mode, detailed error messages with
-    | stack traces will be shown on every error that occurs within your
-    | application. If disabled, a simple generic error page is shown.
-    |
-    */
 
-    'debug' => env('APP_DEBUG', false),
+	/*
+	|--------------------------------------------------------------------------
+	| Application Debug Mode
+	|--------------------------------------------------------------------------
+	|
+	| When your application is in debug mode, detailed error messages with
+	| stack traces will be shown on every error that occurs within your
+	| application. If disabled, a simple generic error page is shown.
+	|
+	*/
+
+	'debug' => env('APP_DEBUG', false),
 
     /*
     |--------------------------------------------------------------------------
