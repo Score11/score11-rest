@@ -12,6 +12,8 @@ before_script:
   - travis_retry composer self-update
   - travis_retry composer install --no-interaction --prefer-source
   - mysql -e 'create database score11_testing;'
+  - mysql -e "grant all privileges on *.* to 'travis'@'localhost' with grant option;" -uroot
+  - export DB_USERNAME=travis DB_DATABASE=score11_testing DB_PASSWORD= QUEUE_DRIVER=sync
   - php artisan migrate:install --env=testing --no-interaction -vvv
 
 script:
