@@ -17,7 +17,7 @@ class MovieStartTransformer extends TransformerAbstract
 		$movieImage = new MovieImage($movie->ID, $movie->image);
         return [
             'id' => $movie->ID,
-            'startdate' => $movie->moviestart->date,
+            'startdate' => $movie->moviestart ? $movie->moviestart->date : '',
 			'image' => $movieImage->getLink()
         ];
     }
