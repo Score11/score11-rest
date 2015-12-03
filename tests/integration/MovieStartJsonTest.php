@@ -39,7 +39,7 @@ class MovieStartJsonTest extends TestCase
                     [
                         'id' => $movie->id,
                         'startdate' => $movie->moviestart()->first()->date,
-                        'image' => 'http://www.score11.de/2012/img/logo-movie.png',
+                        'image' => sprintf('%s/%s', config('app.host'), config('app.movie-logo')),
                         'titles' => [
                             'data' => [
                                 [
