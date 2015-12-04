@@ -10,6 +10,7 @@
         <title>Laravel</title>
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/app.css">
 
         <style type="text/css">
             body {
@@ -55,26 +56,40 @@
 
             <div class="row">
                 <div class="col-xs-6">
-                    <h3>MovieStarts</h3>
-                    <div ng-hide="loading" ng-repeat="movie in moviestarts.data">
-						<img src="{{ movie.image }}" alt="" /><br>
-                        {{ movie.id }} - {{ movie.startdate }}
-                        <div ng-repeat="title in movie.titles.data">
-                            {{ title.version }} - {{ title.title }} - {{ title.year }}
+
+                    <div class="score11-movie-imagelist score11-listbox">
+                        <h3 class="title">MovieStarts</h3>
+                        <div>
+                            <div class="mini-preview" ng-hide="loading" ng-repeat="movie in moviestarts.data|limitTo:8">
+                                <a href="#{{ movie.id }}" style="background: url({{ movie.image }}) no-repeat 50%;">
+                                    <span class="movie-logo-overlay">{{ movie.startdate | dateToISO | date:'dd.MM.yyyy' }}</span>
+                                </a>
+                                <a href="#{{ movie.id }}" class="movie-link">
+                                    <span ng-repeat="title in movie.titles.data">
+                                        <!--{{ title.version }} - -->{{ title.title }}<!-- - {{ title.year }}-->
+                                    </span>
+                                </a>
+                            </div>
                         </div>
-                        <br/>
                     </div>
+
                 </div>
 
                 <div class="col-xs-6">
-                    <h3>DVDStarts</h3>
-                    <div ng-hide="loading" ng-repeat="movie in dvdstarts.data">
-						<img src="{{ movie.image }}" alt="" /><br>
-                        {{ movie.id }} - {{ movie.releaseDate }}
-                        <div ng-repeat="title in movie.titles.data">
-                            {{ title.version }} - {{ title.title }} - {{ title.year }}
+                    <div class="score11-movie-imagelist score11-listbox">
+                        <h3 class="title">DVDStarts</h3>
+                        <div>
+                            <div class="mini-preview" ng-hide="loading" ng-repeat="movie in dvdstarts.data|limitTo:8">
+                                <a href="#{{ movie.id }}" style="background: url({{ movie.image }}) no-repeat 50%;">
+                                    <span class="movie-logo-overlay">{{ movie.releaseDate | dateToISO | date:'dd.MM.yyyy' }}</span>
+                                </a>
+                                <a href="#{{ movie.id }}" class="movie-link">
+                                    <span ng-repeat="title in movie.titles.data">
+                                        <!--{{ title.version }} - -->{{ title.title }}<!-- - {{ title.year }}-->
+                                    </span>
+                                </a>
+                            </div>
                         </div>
-                        <br/>
                     </div>
                 </div>
 

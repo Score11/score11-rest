@@ -1,17 +1,16 @@
-// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
-
 body {
-  background-color: #222;
+    background-color: #222;
 }
 
 .score11-listbox {
-  max-width: 440px;
-  clear: both;
-  display: block;
-  margin-bottom: 10px;
-  float: left;
+    max-width: 440px;
+    clear: both;
+    display: block;
+    margin-bottom: 10px;
+    float: left;
+}
 
-  .title {
+.score11-listbox .title {
     padding: 0;
     background-image: url(../img/orangebar.gif);
     text-align: center;
@@ -21,26 +20,26 @@ body {
     font-weight: bold;
     margin-bottom: 5px;
     font-size: 13px;
-  }
+}
 
-  & > div {
+.score11-listbox > div {
     padding: 0 6px;
-  }
 }
 
 .mini-preview {
-  margin: 0 5px 5px 0;
-  width: 102px;
-  float: left;
-  text-align: center;
-  background-color: #006;
-  border: 1px solid #039;
+    margin: 0 5px 5px 0;
+    width: 102px;
+    float: left;
+    text-align: center;
+    background-color: #006;
+    border: 1px solid #039;
+}
 
-  &:hover {
+.mini-preview:hover {
     background-color: #039;
-  }
+}
 
-  a {
+.mini-preview a {
     display: block;
     width: 100px;
     height: 120px;
@@ -50,24 +49,26 @@ body {
     text-align: center;
     padding-top: 30px;
     overflow: hidden;
+}
 
-    &:hover span.movie-logo-overlay {
-      display: none;
-      text-decoration: none;
-    }
-  }
-  span.movie-logo-overlay {
-    background: rgba(0, 0, 0, .8);
+.mini-preview a:hover span.movie-logo-overlay {
+    display: none;
+    text-decoration: none;
+}
+
+.mini-preview span.movie-logo-overlay {
+    background: rgba(0, 0, 0, 0.8);
     color: white;
     display: block;
     font-size: 13px;
     text-decoration: none;
     padding: 5px 0;
-  }
+}
 
-  .movie-link {
+.mini-preview .movie-link {
     height: 75px;
     padding-top: 3px;
     overflow: hidden;
-  }
 }
+
+/*# sourceMappingURL=app.css.map */
